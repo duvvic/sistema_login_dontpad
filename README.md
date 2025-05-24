@@ -32,7 +32,7 @@ cd nome-do-repo
 2. Instale as dependências:
 
 ```bash
-pip install customtkinter Pillow peewee fastapi
+pip install -r requirements.txt
 ```
 
 ## ▶️ Como Executar

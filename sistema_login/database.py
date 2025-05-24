@@ -1,9 +1,9 @@
-from peewee import *
+from peewee import Model, CharField, SqliteDatabase, OperationalError
 import os
 
 # Caminho absoluto do diretório atual para o banco de dados
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-db_path = os.path.join(BASE_DIR, 'usuarios.db')
+db_path = os.path.join(BASE_DIR, "usuarios.db")
 
 # Define a conexão com o banco de dados SQLite
 db = SqliteDatabase(db_path)
@@ -18,7 +18,7 @@ class Usuario(Model):
 
     class Meta:
         database = db
-        table_name = 'usuario'
+        table_name = "usuario"
 
 
 # Função para conectar e criar as tabelas (caso não existam)
